@@ -125,7 +125,7 @@ function App() {
           </div>
         </div>
         <div className="hero-art hero-photo" aria-label="Khunsak Sirihirankarn">
-          <img src="/khunsak.jpg" alt="คุณศักดิ์ ศิริหิรัญกานต์" />
+          <img src={`${import.meta.env.BASE_URL}kunasak-siri.jpg`} alt="คุณศักดิ์ ศิริหิรัญกานต์" />
           <div className="photo-shade" />
           <div className="float-card fc-1"><b>WMS</b><span>{lang === 'th' ? 'รับเข้า · สต็อก · กระจาย' : 'Receive · stock · distribute'}</span></div>
           <div className="float-card fc-2"><b>QUEUE</b><span>{lang === 'th' ? 'จองคิว · ประตู · เรียกคิว' : 'Book · gate · call'}</span></div>
@@ -155,7 +155,7 @@ function App() {
           <div className="project-list">
             {projects.map((p) => <article className={`project ${p.tone}`} key={p.id}>
               <div className="project-visual">
-                <img className="project-shot" src={`/work/${p.id}.jpg`} alt={p.title} />
+                <img className="project-shot" src={`${import.meta.env.BASE_URL}work/${p.id}.jpg`} alt={p.title} />
                 <OpsBoard steps={p.diagram} file={p.file} caption={t.flowLabel} />
                 <div className="visual-meta"><span>{p.client}</span><span>{p.id} / {String(t.projects.length).padStart(2, '0')}</span></div>
               </div>
